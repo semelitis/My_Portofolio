@@ -1,0 +1,288 @@
+/* Reset  */
+/* the images are not mine i took them from pinterest */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+:root {
+   font-size: 62.5%;
+
+
+  /* Colors */
+  --color-primary: #5c4450;
+  --color-secondary: #ffc513;
+  --color-tertiary: #ff724c;
+  --color-quaternary: #f6eedf;
+  
+  --font-size-title: calc(2rem + 2vw);
+
+}
+
+body {
+  font-family: "Helvetica", sans-serif;
+  background-color: var(--color-primary);
+}
+
+.container {
+  font-family: "Helvetica", sans-serif;
+  background-color: var(--color-primary);
+  display: grid;
+  grid-template-columns:1fr repeat(10,minmax(min-content, 15rem))1fr ;
+  grid-template-rows: 100vh repeat(8, min-content);
+}
+
+
+
+
+header#header {
+  /* background-color: var(--color-primary); */
+  grid-column: 1 /13;
+  background: linear-gradient(var(--color-primary),var(--color-tertiary));
+  background-position: center;
+  background-size: cover;
+  background-image: url("img/3f49111e93490d36066d1bb0b9d84e42.jpg");
+
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.header_content {
+  grid-column: 1 / -1;
+  align-items: center;
+}
+
+.header_title {
+  font-size: calc(4rem + 4vw);
+  font-weight: 300;
+  color: black;
+  padding: 0 2rem 0 calc(2rem + 2vw);
+}
+
+.header_text {
+  font-size: calc(1rem + 2vw);
+  font-weight: 500;
+  padding: 2vh 2rem 6vh calc(2rem + 2vw);
+}
+.header_content a{
+  padding: 1rem 2rem;
+  background-color: white;
+  color: var(--color-primary);
+}
+
+.header_content p{
+  color: black;  
+  font-size: calc(1rem + 1vw);
+  font-weight: 200;
+}
+.header_content a:link,
+.header_content a:hover{
+  color: var(--color-secondary);
+  font-size: calc(0.5rem + 1vw);
+  text-decoration: none;
+  align-self: center;
+  padding: 1rem 2rem;
+}
+
+/* about me section */
+section#about_me {
+  background-color: var(--color-primary);
+  grid-column: 1 / 13;
+  padding: 10vh 3vw;
+}
+
+.about_me_content {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about_me_title {
+  font-size: calc(2rem + 2vw);
+  padding: 0 2rem 1rem;
+  font-weight: 300;
+  color: white;
+
+  margin-bottom: 2rem;
+  position: relative;
+}
+.about_me_p {
+  color: white;
+  font-size: calc(1rem + 1vw);
+  font-weight: 200;
+  
+}
+
+/* my work section */
+section#my_work {
+
+  margin: 1.5rem 1.5rem ;
+  grid-column: 1 / 13;
+  padding-bottom: 20rem;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+  /* grid-template-rows:calc(3rem+2vh) 1fr; ; */
+  grid-gap: 2rem;
+}
+
+
+
+.my_work_card {
+  /* background:linear-gradient(
+    var(--color-primary),
+    var(--color-tertiary)
+  ); */
+  height: 25rem;
+  padding: 2rem;
+  background-position: center;
+  background-size: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+div.my_work_card:hover,
+div.my_work_card:link {
+  transform: scale(1.05);
+  /* for not going out of the container */
+  overflow: hidden;
+}
+
+h2.my_work_card_title {
+  font-size:calc(2rem + 2vw);
+  padding: 0 2rem 1rem 0;
+  font-weight: 400;
+  color:black;
+  
+}
+
+div.my_work_card p {
+  font-weight: 200;
+  font-size: 2rem;
+  margin: 1.5rem 0 4rem 0;
+  color:black;
+  font-weight: 500;
+}
+
+
+div.my_work_card a:hover,
+div.my_work_card a:link {
+  margin-bottom: 2rem;
+  background-color: white;
+
+  color: var(--color-secondary);
+  text-decoration: none;
+  font-size: calc(0.5rem + 1vw);
+  padding: 1rem 2rem;
+  
+
+}
+.card_1{
+ overflow-x: hidden;
+  background-position: center;
+  background-size: cover;
+  background: url("./img/be55d52773031b4cc398997fad51ff9f.jpg");
+}
+
+.card_2 {
+  background:url("./img/4118be3e233c5d072375159c9e355c5c.jpg");
+}
+
+.card_3 {
+  background: url("img/93841c8312a5580cf85a3e2098fb03d5.jpg");
+}
+
+.card_4 {
+  background: url("img/6f4a0621e91d24daf92a7f2b4d3cf998.jpg");
+}
+
+.card_5 {
+  background: url("img/e7f53291bbb6931b49813bea3d9ab831.jpg");
+}
+
+.card_6 {
+  background:url("img/e7f53291bbb6931b49813bea3d9ab831.jpg");
+}
+
+
+/* footer */
+footer#footer {
+  background-color: var(--color-primary);
+  grid-column: 1 / 13;
+  padding: 6vh 4vw;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  
+  
+  justify-items: center;
+}
+.footer_social{
+  grid-column: 2/3;
+
+}
+
+
+.footer_social_link a{
+ margin: 0;
+ padding: 0;
+}
+
+.footer_social_link  img{
+  font-size: 2rem;
+  width: 4rem;
+  height: 4rem;
+  margin: 2px;
+  padding: 0;
+  
+}
+/* for tablet constraints */
+@media screen and (max-width: 900px) {
+  
+  section#my_work{
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  }
+  div.my_work_card p {
+    margin: 1.5rem 0 4rem 0;
+  }
+  
+  footer#footer {
+    padding: 4vh 2vw;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  }
+  .header_content a:link,
+ .header_content a:hover{
+      font-size: medium;          
+    }
+    div.my_work_card a:hover,
+  div.my_work_card a:link {
+  
+  font-size: small;
+}
+}
+
+/* for mobile constraints */
+@media screen and (max-width: 300px) {
+ /* need to handle the font size */
+  section#my_work {
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  }
+  footer#footer {
+    padding: 4vh 2vw;
+  }
+  .header_content a:link,
+ .header_content a:hover{
+     padding: 0.5rem 1rem;
+   ;          
+  }
+  div.my_work_card a:hover,
+  div.my_work_card a:link {
+  
+  font-size: small;
+}
+
+}
